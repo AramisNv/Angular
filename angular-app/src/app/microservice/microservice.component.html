@@ -1,0 +1,11 @@
+<div *ngIf="loading()">
+<p>Loading message from Laravel microservice...</p>
+</div>
+
+<div *ngIf="message() && !loading()">
+<p><strong>Mensaje desde el backend:</strong> {{ message() }}</p>
+</div>
+
+<div *ngIf="error() && !loading()">
+<p style="color: #f38ba8; font-weight: 500;">{{ error() }}</p>
+</div>
